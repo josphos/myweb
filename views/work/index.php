@@ -2,6 +2,7 @@
 
 use yii\helpers\Html;
 use yii\grid\GridView;
+use yii\bootstrap\Tabs;
 
 /* @var $this yii\web\View */
 /* @var $searchModel app\models\WorkSearch */
@@ -10,6 +11,33 @@ use yii\grid\GridView;
 $this->title = 'Works';
 $this->params['breadcrumbs'][] = $this->title;
 ?>
+<?php
+
+echo Tabs::widget([
+    'items' => [
+        [
+            'label' => 'ตัวชี้วัดระดับเขต',
+            'content' => 'เขต',
+            'active' => true
+        ],
+        [
+            'label' => 'ตัวชี้วัดระดับจังหวัด',
+            'content' => '',
+            'headerOptions' => [],
+            
+        ],
+        [
+            'label' => 'คู่มือ',
+            'content' => '',
+            'headerOptions' => [],
+           
+        ],
+    ],
+]);
+
+?>
+
+
 <div class="work-index">
 
     <h1><?= Html::encode($this->title) ?></h1>

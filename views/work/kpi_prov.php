@@ -38,6 +38,12 @@ use app\models\TbKpi;
             ],
              'target',
              'result',
+             [
+                 'label'=>'ร้อยละ',
+                  'value'=>function($model){
+                       return number_format($model->result/$model->target*100,2); 
+                  }
+             ],
              ['class' => 'yii\grid\ActionColumn'],
                         ],
                     ]);

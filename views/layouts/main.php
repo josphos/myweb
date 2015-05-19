@@ -37,7 +37,12 @@ AppAsset::register($this);
                 'options' => ['class' => 'navbar-nav navbar-right'],
                 'items' => [
                     ['label' => 'หน้าหลัก', 'url' => ['/site/index']],
-                    ['label' => 'เกี่ยวกับ', 'url' => ['/site/about']],
+                    ['label' => 'ตัวชี้วัด', 
+                        'items'=>[
+                            ['label'=>'เพิ่มตัวชี้วัด','url'=>['tb-kpi/index']],
+                            ['label'=>'คีย์ผลงาน','url'=>['#']],
+                        ]
+                    ],
                     ['label' => 'ติดต่อ', 'url' => ['/site/contact']],
                     ['label' => 'รายงาน', 'url' => ['/report/index']],
                     Yii::$app->user->isGuest ?

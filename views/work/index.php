@@ -8,7 +8,7 @@ use yii\bootstrap\Tabs;
 /* @var $searchModel app\models\WorkSearch */
 /* @var $dataProvider yii\data\ActiveDataProvider */
 
-$this->title = 'Works';
+$this->title = 'รวมตัวชี้วัด';
 $this->params['breadcrumbs'][] = $this->title;
 ?>
 <?php

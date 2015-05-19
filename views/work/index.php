@@ -22,7 +22,10 @@ echo Tabs::widget([
         ],
         [
             'label' => 'ตัวชี้วัดระดับจังหวัด',
-            'content' => '',
+            'content' => $this->render('kpi_prov',[
+                'dataProvider' => $dataProvider,
+                'searchModel' => $searchModel,
+            ]),
             'headerOptions' => [],
             
         ],
@@ -38,28 +41,4 @@ echo Tabs::widget([
 ?>
 
 
-<div class="work-index">
 
-    <h1><?= Html::encode($this->title) ?></h1>
-    <?php // echo $this->render('_search', ['model' => $searchModel]); ?>
-
-    <p>
-        <?= Html::a('Create Work', ['create'], ['class' => 'btn btn-success']) ?>
-    </p>
-
-    <?= GridView::widget([
-        'dataProvider' => $dataProvider,
-        'filterModel' => $searchModel,
-        'columns' => [
-            ['class' => 'yii\grid\SerialColumn'],
-
-            'kpi',
-            'prov',
-            'target',
-            'result',
-
-            ['class' => 'yii\grid\ActionColumn'],
-        ],
-    ]); ?>
-
-</div>

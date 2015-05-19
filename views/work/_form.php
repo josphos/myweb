@@ -4,6 +4,7 @@ use yii\helpers\Html;
 use yii\widgets\ActiveForm;
 use yii\helpers\ArrayHelper;
 use app\models\TbKpi;
+use app\models\Cchangwat;
 
 /* @var $this yii\web\View */
 /* @var $model app\models\Work */
@@ -22,7 +23,13 @@ use app\models\TbKpi;
     ])
     ?>
 
-    <?= $form->field($model, 'prov')->textInput(['maxlength' => true]) ?>
+      <?php
+    $items = ArrayHelper::map(Cchangwat::find()->all(),'code','name')
+    ?>
+    <?= $form->field($model, 'prov')->dropDownList($items, [
+        'prompt'=>'-- จังหวัด --'
+    ])
+    ?>
 
     <?= $form->field($model, 'target')->textInput() ?>
 

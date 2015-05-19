@@ -1,0 +1,1 @@
+ไฟล์ view  =  index.php

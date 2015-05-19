@@ -17,7 +17,7 @@ echo Tabs::widget([
     'items' => [
         [
             'label' => 'ตัวชี้วัดระดับเขต',
-            'content' => 'เขต',
+            'content' => '<input type=text>',
             'active' => true
         ],
         [

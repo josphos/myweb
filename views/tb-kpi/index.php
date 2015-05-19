@@ -7,16 +7,16 @@ use yii\grid\GridView;
 /* @var $searchModel app\models\TbKpiSearch */
 /* @var $dataProvider yii\data\ActiveDataProvider */
 
-$this->title = 'Tb Kpis';
+$this->title = 'รายการตัวชี้วัด';
 $this->params['breadcrumbs'][] = $this->title;
 ?>
 <div class="tb-kpi-index">
 
-    <h1><?= Html::encode($this->title) ?></h1>
+    <h3><?= Html::encode($this->title) ?></h3>
     <?php // echo $this->render('_search', ['model' => $searchModel]); ?>
 
     <p>
-        <?= Html::a('Create Tb Kpi', ['create'], ['class' => 'btn btn-success']) ?>
+        <?= Html::a('เพิ่มตัวชี้วัด', ['create'], ['class' => 'btn btn-success']) ?>
     </p>
 
     <?= GridView::widget([

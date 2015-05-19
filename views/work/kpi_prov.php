@@ -4,11 +4,9 @@ use yii\helpers\Html;
 ?>
 <div class="work-index">
 
-    <h1><?= Html::encode($this->title) ?></h1>
-    <?php // echo $this->render('_search', ['model' => $searchModel]); ?>
-
+    <br>
     <p>
-        <?= Html::a('Create Work', ['create'], ['class' => 'btn btn-success']) ?>
+        <?= Html::a('เพิ่ม', ['create'], ['class' => 'btn btn-success']) ?>
     </p>
 
     <?= GridView::widget([

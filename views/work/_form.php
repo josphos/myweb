@@ -13,6 +13,7 @@ use app\models\TbKpi;
 <div class="work-form">
 
     <?php $form = ActiveForm::begin(); ?>
+    
     <?php
     $items = ArrayHelper::map(TbKpi::find()->all(),'id','topic')
     ?>

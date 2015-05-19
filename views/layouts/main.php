@@ -40,7 +40,7 @@ AppAsset::register($this);
                     ['label' => 'ตัวชี้วัด', 
                         'items'=>[
                             ['label'=>'เพิ่มตัวชี้วัด','url'=>['tb-kpi/index']],
-                            ['label'=>'คีย์ผลงาน','url'=>['#']],
+                            ['label'=>'คีย์ผลงาน','url'=>['work/index']],
                         ]
                     ],
                     ['label' => 'ติดต่อ', 'url' => ['/site/contact']],

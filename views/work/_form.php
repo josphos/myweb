@@ -2,6 +2,8 @@
 
 use yii\helpers\Html;
 use yii\widgets\ActiveForm;
+use yii\helpers\ArrayHelper;
+use app\models\TbKpi;
 
 /* @var $this yii\web\View */
 /* @var $model app\models\Work */
@@ -11,8 +13,13 @@ use yii\widgets\ActiveForm;
 <div class="work-form">
 
     <?php $form = ActiveForm::begin(); ?>
-
-    <?= $form->field($model, 'kpi')->textInput() ?>
+    <?php
+    $items = ArrayHelper::map(TbKpi::find()->all(),'id','topic')
+    ?>
+    <?= $form->field($model, 'kpi')->dropDownList($items, [
+        'prompt'=>'-- ตัวชี้วัด --'
+    ])
+    ?>
 
     <?= $form->field($model, 'prov')->textInput(['maxlength' => true]) ?>
 

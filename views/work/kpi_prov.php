@@ -1,6 +1,7 @@
 <?php
 use yii\grid\GridView;
 use yii\helpers\Html;
+use app\models\Cchangwat;
 ?>
 <div class="work-index">
 
@@ -16,7 +17,17 @@ use yii\helpers\Html;
             ['class' => 'yii\grid\SerialColumn'],
 
             'kpi',
-            'prov',
+            
+            [
+                'attribute'=>'prov',
+                'value'=>function($model){
+                  
+                    $code = $model->prov;
+                    $data=Cchangwat::find()->where(['code'=>$code])->one();
+                    return $code."-".$data->name;
+        
+                }
+            ],
             'target',
             'result',
 

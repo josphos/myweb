@@ -39,9 +39,9 @@ class Cchangwat extends \yii\db\ActiveRecord
     public function attributeLabels()
     {
         return [
-            'code' => 'Code',
-            'name' => 'Name',
-            'zonecode' => 'Zonecode',
+            'code' => 'รหัสจังหวัด',
+            'name' => 'จังหวัด',
+            'zonecode' => 'เขต',
         ];
     }
 }

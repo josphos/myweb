@@ -40,10 +40,10 @@ class Work extends \yii\db\ActiveRecord
     public function attributeLabels()
     {
         return [
-            'kpi' => 'Kpi',
-            'prov' => 'Prov',
-            'target' => 'Target',
-            'result' => 'Result',
+            'kpi' => 'ตัวชี้วัด',
+            'prov' => 'จังหวัด',
+            'target' => 'เป้าหมาย',
+            'result' => 'ผลงาน',
         ];
     }
 }

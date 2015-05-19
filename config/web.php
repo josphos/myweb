@@ -3,6 +3,7 @@
 $params = require(__DIR__ . '/params.php');
 
 $config = [
+    'language'=>'TH',
     'name'=>'ระบบสารสนเทศสำนักสถานพยาบาลฯ',    
     'id' => 'basic',
     'basePath' => dirname(__DIR__),

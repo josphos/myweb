@@ -8,7 +8,7 @@ use yii\helpers\Url;
     <h1>ยินดีต้อนรับเข้าสู่ <?= Yii::$app->name ?></h1>
 
     <?php Pjax::begin(); ?>
-    <a href=" <?=  Url::to(['site/index'])?>" id="refresh" >refresh</a>
+    <a href=" <?=  Url::to(['site/index'])?>" id="refresh" style="display: none">refresh</a>
 
     <p><?= $time ?></p>
 

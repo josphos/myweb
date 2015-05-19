@@ -25,4 +25,4 @@ $(document).ready(function() {
 JS;
 $this->registerJs($script);
 ?>
-ทดสอบทดสอบ
+test test test

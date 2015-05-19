@@ -37,7 +37,7 @@ class TbKpi extends \yii\db\ActiveRecord
     public function attributeLabels()
     {
         return [
-            'id' => 'ID',
+            'id' => 'ข้อที่',
             'topic' => 'ชื่อตัวชี้วัด',
             'note' => 'หมายเหตุ',
         ];

@@ -10,7 +10,7 @@ $this->registerJsFile('./js/chart_dial.js');
     Highcharts::widget([
         'scripts' => [
             'highcharts-more',
-            //'themes/grid'
+        //'themes/grid'
         //'modules/exporting',
         ]
     ]);
@@ -23,7 +23,7 @@ $this->registerJsFile('./js/chart_dial.js');
             <?php
             $sql = "select 90 as base";
             $base = Yii::$app->db->createCommand($sql)->queryScalar();
-            $result= 75;
+            $result = 75;
             $this->registerJs("
                         var obj_div=$('#ch1');
                         gen_dial(obj_div,$base,$result);
@@ -38,16 +38,12 @@ $this->registerJsFile('./js/chart_dial.js');
         พื้นที่แสดง chart2
     </div>
     <?php
-    $data =  [
-                ['พิษณุโลก',   45],
-                ['นนทบุรี',       26.8],
-                ['กทม',    8.5],
-                ['เชียงใหม่',    8.5],
-                ['แพร่',     6.2],
-                ['สุโขทัย',   0.7]
-            ];
+    $data[] = ['พิษณุโลก', 45];
+
+    $data[] = ['พิจิตร', 45];
+
     $data = json_encode($data);
-    
+
     $this->registerJs("
         $(function () {
     $('#chart2').highcharts({

@@ -8,5 +8,6 @@ class ChartController extends \yii\web\Controller
     {
         return $this->render('index');
     }
+    //////uuuu
 
 }

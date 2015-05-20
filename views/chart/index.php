@@ -21,9 +21,12 @@ $this->registerJsFile('./js/chart_dial.js');
     <div class="col-sm-4"> 
         <div >
             <?php
+            $sql = "select 90 as base";
+            $base = Yii::$app->db->createCommand($sql)->queryScalar();
+            $result= 75;
             $this->registerJs("
                         var obj_div=$('#ch1');
-                        gen_dial(obj_div,90,80);
+                        gen_dial(obj_div,$base,$result);
                     ");
             ?>
             <h4>ประชาชนอายุ 35 ปีขึ้นไปได้รับการคัดกรอง<br>ความดันโลหิต </h4>

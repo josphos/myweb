@@ -1,9 +1,21 @@
-<?php
-/* @var $this yii\web\View */
-?>
 <h1>chart/index</h1>
+<?php
+use miloschuman\highcharts\Highcharts;
 
-<p>
-    You may change the content of this page by modifying
-    the file <code><?= __FILE__; ?></code>.
-</p>
+echo Highcharts::widget([
+   'options' => [
+      'title' => ['text' => 'Fruit Consumption'],
+      'xAxis' => [
+         'categories' => ['Apples', 'Bananas', 'Oranges']
+      ],
+      'yAxis' => [
+         'title' => ['text' => 'Fruit eaten']
+      ],
+      'series' => [
+         ['name' => 'Jane', 'data' => [1, 0, 4]],
+         ['name' => 'John', 'data' => [5, 7, 3]]
+      ]
+   ]
+]);
+
+?>

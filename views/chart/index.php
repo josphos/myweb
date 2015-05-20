@@ -17,21 +17,24 @@ $this->registerJsFile('./js/chart_dial.js');
     ?>
 </div>
 
-<div>
-    <?php
-    $this->registerJs("
+<div class="row"> 
+    <div class="col-sm-4"> 
+        <div >
+            <?php
+            $this->registerJs("
                         var obj_div=$('#ch1');
                         gen_dial(obj_div,90,80);
                     ");
-    ?>
-    <h4>ประชาชนอายุ 35 ปีขึ้นไปได้รับการคัดกรอง<br>ความดันโลหิต </h4>
-    <div id="ch1"></div>
-</div>
+            ?>
+            <h4>ประชาชนอายุ 35 ปีขึ้นไปได้รับการคัดกรอง<br>ความดันโลหิต </h4>
+            <div id="ch1"></div>
+        </div>
+    </div>
 
-<div id="chart2">
-    พื้นที่แสดง chart2
-</div>
- <?php
+    <div id="chart2" class="col-sm-4">
+        พื้นที่แสดง chart2
+    </div>
+    <?php
     $this->registerJs("
         $(function () {
     $('#chart2').highcharts({
@@ -40,6 +43,7 @@ $this->registerJsFile('./js/chart_dial.js');
             plotBorderWidth: null,
             plotShadow: false
         },
+        credits:false,
         title: {
             text: 'จังหวัด'
         },
@@ -63,7 +67,7 @@ $this->registerJsFile('./js/chart_dial.js');
             type: 'pie',
             name: 'prov',
             data: [
-                ['พิษณุโลก',   45.0],
+                ['พิษณุโลก',   45],
                 ['นนทบุรี',       26.8],
                 {
                     name: 'กทม',
@@ -80,6 +84,11 @@ $this->registerJsFile('./js/chart_dial.js');
 });
     
      ");
-?>
+    ?>
+
+
+
+</div>
+
 
 

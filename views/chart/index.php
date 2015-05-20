@@ -38,10 +38,15 @@ $this->registerJsFile('./js/chart_dial.js');
         พื้นที่แสดง chart2
     </div>
     <?php
-    $data[] = ['พิษณุโลก', 45];
-
-    $data[] = ['พิจิตร', 45];
-
+        
+    $sql ="select prov,result from work";
+    $raw = $base = Yii::$app->db->createCommand($sql)->queryAll();
+    foreach ($raw as $d){
+        $prov= $d['prov'];
+        $result = $d['result'];
+        $data[] = [$prov,$result*1];
+        
+ 
     $data = json_encode($data);
 
     $this->registerJs("

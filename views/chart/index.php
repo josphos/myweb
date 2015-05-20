@@ -10,7 +10,7 @@ $this->registerJsFile('./js/chart_dial.js');
     Highcharts::widget([
         'scripts' => [
             'highcharts-more',
-            'themes/grid'
+            //'themes/grid'
         //'modules/exporting',
         ]
     ]);

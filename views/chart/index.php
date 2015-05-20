@@ -41,10 +41,12 @@ $this->registerJsFile('./js/chart_dial.js');
         
     $sql ="select prov,result from work";
     $raw = $base = Yii::$app->db->createCommand($sql)->queryAll();
+    
     foreach ($raw as $d){
         $prov= $d['prov'];
         $result = $d['result'];
         $data[] = [$prov,$result*1];
+    }
         
  
     $data = json_encode($data);

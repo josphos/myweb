@@ -12,6 +12,7 @@ class ReportController extends \yii\web\Controller
     public function actionReport1() {
         return $this->render('report1');
     }
+    
        
 
 }

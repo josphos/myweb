@@ -9,7 +9,7 @@ use app\models\TbKpi;
 
     <br>
     <p>
-<?= Html::a('เพิ่ม', ['create'], ['class' => 'btn btn-success']) ?>
+        <?= Html::a('เพิ่ม', ['create'], ['class' => 'btn btn-success']) ?>
     </p>
 
     <?=
@@ -26,8 +26,8 @@ use app\models\TbKpi;
                     $data = TbKpi::find()->where(['id' => $code])->one();
                     return $code . "-" . $data->topic;
                 }
-            ],
-            [
+                    ],
+                    [
                         'attribute' => 'prov',
                         'value' => function($model) {
 
@@ -35,16 +35,16 @@ use app\models\TbKpi;
                             $data = Cchangwat::find()->where(['code' => $code])->one();
                             return $code . "-" . $data->name;
                         }
-            ],
-             'target',
-             'result',
-             [
-                 'label'=>'ร้อยละ',
-                  'value'=>function($model){
-                       return number_format($model->result/$model->target*100,2); 
-                  }
-             ],
-             ['class' => 'yii\grid\ActionColumn'],
+                            ],
+                            'target',
+                            'result',
+                            [
+                                'label' => 'ร้อยละ',
+                                'value' => function($model) {
+                                    return number_format($model->result / $model->target * 100, 2);
+                                }
+                            ],
+                            ['class' => 'yii\grid\ActionColumn'],
                         ],
                     ]);
                     ?>

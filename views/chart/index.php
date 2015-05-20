@@ -41,7 +41,7 @@ $this->registerJsFile('./js/chart_dial.js');
             plotShadow: false
         },
         title: {
-            text: 'Browser market shares at a specific website, 2014'
+            text: 'จังหวัด'
         },
         tooltip: {
             pointFormat: '{series.name}: <b>{point.percentage:.1f}%</b>'
@@ -61,19 +61,19 @@ $this->registerJsFile('./js/chart_dial.js');
         },
         series: [{
             type: 'pie',
-            name: 'Browser share',
+            name: 'prov',
             data: [
-                ['Firefox',   45.0],
-                ['IE',       26.8],
+                ['พิษณุโลก',   45.0],
+                ['นนทบุรี',       26.8],
                 {
-                    name: 'Chrome',
+                    name: 'กทม',
                     y: 12.8,
                     sliced: true,
                     selected: true
                 },
-                ['Safari',    8.5],
-                ['Opera',     6.2],
-                ['Others',   0.7]
+                ['เชียงใหม่',    8.5],
+                ['แพร่',     6.2],
+                ['สุโขทัย',   0.7]
             ]
         }]
     });

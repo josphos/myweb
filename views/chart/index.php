@@ -38,6 +38,16 @@ $this->registerJsFile('./js/chart_dial.js');
         พื้นที่แสดง chart2
     </div>
     <?php
+    $data =  [
+                ['พิษณุโลก',   45],
+                ['นนทบุรี',       26.8],
+                ['กทม',    8.5],
+                ['เชียงใหม่',    8.5],
+                ['แพร่',     6.2],
+                ['สุโขทัย',   0.7]
+            ];
+    $data = json_encode($data);
+    
     $this->registerJs("
         $(function () {
     $('#chart2').highcharts({
@@ -69,19 +79,7 @@ $this->registerJsFile('./js/chart_dial.js');
         series: [{
             type: 'pie',
             name: 'prov',
-            data: [
-                ['พิษณุโลก',   45],
-                ['นนทบุรี',       26.8],
-                {
-                    name: 'กทม',
-                    y: 12.8,
-                    sliced: true,
-                    selected: true
-                },
-                ['เชียงใหม่',    8.5],
-                ['แพร่',     6.2],
-                ['สุโขทัย',   0.7]
-            ]
+            data:$data
         }]
     });
 });
